@@ -1,0 +1,84 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+body{
+    margin: 50px;
+}
+
+#homePage
+{
+    display: block;
+    width: 20%;
+    border: 5px solid rgb(28, 27, 27);
+    margin: auto;
+    padding: 30px;
+    height: 20%;
+
+}
+
+#newUserPage{
+    display: none;
+    width: 20%;
+    border: 5px solid rgb(28, 27, 27);
+    margin: auto;
+    padding: 30px;
+    height: 20%;
+
+}
+#existingUserPage
+{
+    display: none;
+    width: 20%;
+    border: 5px solid rgb(28, 27, 27);
+    margin: auto;
+    padding: 30px;
+    height: 20%;
+
+}
+
+#dashBoard{
+    display: none;
+}
+.menu-bar
+{
+     font-family: sans-serif;;
+   flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    width: 10%;
+    margin-left: 10%;
+}
+
+.menu
+{
+    background-color: white;
+    color: black;
+    display: flex;
+    margin: 1.3rem;
+}
+
+.menu-bar:hover
+{
+    background-color: gray;
+    cursor: pointer;
+}
+
+#home-heading
+{
+    text-align: center;
+    font-size: 10px;
+}
+#medicine-details1
+{
+    display: none;
+}
+#home1
+{
+    display: block;
+}
+

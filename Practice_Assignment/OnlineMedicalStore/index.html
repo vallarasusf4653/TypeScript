@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Online Medical Store</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!--First Page-->
+    <div id="homePage">
+        <h2 style="text-align: center;">Home</h2>
+        <button style="text-align: center;margin-left: 3rem;" onclick="newUserPage()">Sign UP</button>
+        <button style="text-align: center; margin-left: 5rem;" onclick="existingUserPage()">Sign IN</button>
+    </div>
+
+    <div id="newUserPage">
+        <h3>Sign Up </h3>
+
+        <p>
+            <label for="newUserEmail">Email</label>
+            <input type="text" id="newUserEmail" placeholder="Enter your mail"
+                onkeyup="checkNewUserEmail('newUserEmail')">
+            <span id="newUserEmailMessage" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="newUserPassword">Password</label>
+            <input type="password" id="newUserPassword" placeholder="Enter your password"
+                onkeyup="checkNewUserPassword('newUserPassword')">
+            <span id="newUserPasswordMessage" class="error-message"></span>
+        </p>
+        <p>
+            <label for="newUserConfirmPassword">Confirm Password</label>
+            <input type="password" id="newUserConfirmPassword" placeholder="Enter your password"
+                onkeyup="checkNewUserConfirmPassword('newUserConfirmPassword')">
+            <span id="newUserConfirmPasswordMessage" class="error-message"></span>
+        </p>
+        <p>
+            <label for="newUserPhone">Phone Number</label>
+            <input type="text" id="newUserPhone" placeholder="Enter your Phone"
+                onkeyup="checkNewUserPhone('newUserPhone')">
+            <span id="newUserPhoneMessage" class="error-message"></span>
+        </p>
+        <button onclick="SignUp()">Sign Up</button>
+    </div>
+
+    <div id="existingUserPage">
+        <h3>Sign In </h3>
+        <form>
+            <p>
+                <label for="existUserEmail">Username</label>
+                <input type="email" id="existUserEmail" onkeyup="checkExistUserEmail('existUserEmail')">
+                <span id="existUserNameMessage" class="error-message"></span>
+            </p>
+            <p>
+                <label for="existUserPassword">Password</label>
+                <input type="text" id="existUserPassword" onkeyup="checkExistUserPassword('existUserPassword')">
+                <span id="existUserPasswordMessage" class="error-message"></span>
+            </p>
+            <button onclick="SignIn()" type="button">Sign In</button>
+            <button type="reset" value="Cancel">Cancel</button>
+        </form>
+    </div>
+    <div id="dashBoard">
+        <div class="menu" id="menubar">
+            <div class="menu-bar" id="home">
+                <p>Home</p>
+            </div>
+            <div class="menu-bar" id="medicine-details" onclick="Medicinenavbar()">
+                <p>Medicine Details</p>
+            </div>
+            <div class="menu-bar" id="purchase" onclick="PurchaseItem()">
+                <p>Purchase</p>
+            </div>
+            <div class="menu-bar" id="cancel">
+                <p>Cancel</p>
+            </div>
+            <div class="menu-bar" id="top-up" onclick="RechargeAmount()">
+                <p>Top Up</p>
+            </div>
+            <div class="menu-bar" id="show-balance" onclick="ShowBalance()">
+                <p>Show Balance</p>
+            </div>
+            <div class="menu-bar" id="order-history">
+                <p>Order History</p>
+            </div>
+        </div>
+
+        <div id="home1">
+            <h2>Welcome to Online Medical Store</h2>
+        </div>
+
+        <div id="medicine-details1">
+            <table id="medicineData" border="1">
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Medicine Price</th>
+                    <th>DateOfExp</th>
+                </tr>
+
+            </table>
+        </div>
+        <div class="menu-bar" id="purchase">
+            <table id="medicineData1" border="1">
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Medicine Price</th>
+                    <th>DateOfExp</th>
+                </tr>
+
+            </table>
+            <form action="">
+                <input type="text" id="medicineName" placeholder="medicine name">
+                <input type="number" id="medicineCount" placeholder="medicine count">
+            </form>
+        </div>
+        <div class="menu-bar" id="cancel"></div>
+        <div class="menu-bar" id="top-up"></div>
+        <div class="menu-bar" id="show-balance">
+
+        </div>
+        <div class="menu-bar" id="order-history"></div>
+
+
+
+        <script src="dist/medicalStore.js"></script>
+</body>
+
+</html>
