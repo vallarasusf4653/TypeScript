@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Metro Card Management</title>
+    <link rel="stylesheet" href="Css/MetroCard.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="header">
+            <button onclick="NewUser()">SIGN UP</button>
+            <button onclick="ExistUser()">SIGN IN</button>
+        </div>
+
+
+
+        <div id="signup">
+            <form>
+                <p>
+                    <label for="username">UserName</label>
+                    <input type="text" id="username" placeholder="Username" onkeyup="validateUserName('username')">
+                    <span id="usernamemessage" class="errormsg"></span>
+                </p>
+                <p>
+                    <label for="useremail">Email</label>
+                    <input type="text" id="useremail" placeholder="Email" onkeyup="validateUserEmail('useremail')">
+                    <span id="useremailmessage" class="errormsg"></span>
+                </p>
+                <p>
+                    <label for="userpassword">Password</label>
+                    <input type="text" id="userpassword" placeholder="Password"
+                        onkeyup="validatePassword ('userpassword')">
+                    <span id="userpasswordmessage" class="errormsg"></span>
+                </p>
+                <p>
+                    <label for="userconfirmpassword">Confirm Password</label>
+                    <input type="text" id="userconfirmpassword" placeholder="ConfirmPassword"
+                        onkeyup="validateConfirmPassword('userconfirmpassword')">
+                    <span id="userconfirmpasswordmessage" class="errormsg"></span>
+                </p>
+                <p>
+                    <label for="userphonenumber">Phone Number</label>
+                    <input type="number" id="userphonenumber" placeholder="Username"
+                        onkeyup="validatePhoneNumber('userphonenumber')">
+                    <span id="userphonenumbermessage" class="errormsg"></span>
+                </p>
+                <button type="button" onclick="SignUp()">Sign Up</button>
+            </form>
+        </div>
+        <div id="signin">
+            <form>
+                <p>
+                    <label for="existemail">Email</label>
+                    <input type="text" id="existemail" placeholder="Email" onkeyup="verifyUserEmail('existemail')">
+                    <span id="existemailmessage" class="errormsg"></span>
+                </p>
+                <p>
+                    <label for="existpassword">Password</label>
+                    <input type="text" id="existpassword" placeholder="Password"
+                        onkeyup="verifyUserPassword('existpassword')">
+                    <span id="existpasswordmessage" class="errormsg"></span>
+                </p>
+                <button type="button" onclick="SignIn()">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+    <div id="dashboard">
+        <ul>
+            <li onclick="homebutton()">Home</li>
+            <li onclick="travelbutton()">Travel</li>
+            <li onclick="Bookticket()">Ticket Booking</li>
+            <li onclick="rechargebutton()">Recharge</li>
+            <li onclick="showbalancebutton()">ShowBalance</li>
+            <li onclick="signout()">SignOut</li>
+        </ul>
+    </div>
+
+
+    <div id="homebutton">
+        <h1>Welcome</h1>
+    </div>
+
+
+
+    <div id="travelbutton">
+        <table id="travel" border="1">
+            <thead>
+                <tr>
+                    <th>TravelID</th>
+                    <th>FromLocation</th>
+                    <th>ToLocation</th>
+                    <th>Date</th>
+                    <th>TravelCost</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+
+    <div id="ticketbutton">
+        <table id="ticket" border="1">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>FromLocation</th>
+                    <th>ToLocation</th>
+                    <th>TravelCost</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <!---->
+            </tbody>
+
+        </table>
+    </div>
+    <div id="rechargebutton">
+        <label for="RechargeAmount">Enter Amount to Recharge</label>
+        <p><input type="number" id="rechargeamount" placeholder="Enter Amount"></p>
+        <button onclick="rechargemessage()">Recharge </button> &nbsp;&nbsp;&nbsp; <span id="amountmessage" style="color: seagreen;"></span>
+    </div>
+   
+       
+    
+    <div id="showbalancebutton">
+        <h3>Current Balance = <span id="balance"></span></h3>
+    </div>
+
+
+
+    <div id="signout"></div>
+
+    <script src="Js/MetroCard.js"></script>
+</body>
+
+</html>
